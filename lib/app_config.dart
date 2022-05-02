@@ -5,8 +5,8 @@ var this_year = DateTime.now().year.toString();
 class AppConfig {
   static String copyright_text = "@ ActiveItZone " + this_year; //this shows in the splash screen
   static String app_name = "Active eCommerce"; //this shows in the splash screen
-  static String purchase_code = "bkash"; //enter your purchase code for the app from codecanyon
-  //static String purchase_code = ""; //enter your purchase code for the app from codecanyon
+  static String purchase_code = "f4b3408e-cb0d-4aac-8ff4-274951b3df2b"; //enter your purchase code for the app from codecanyon
+  // static String purchase_code = ""; //enter your purchase code for the app from codecanyon
 
   //Default language config
   static String default_language ="en";
