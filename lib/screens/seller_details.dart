@@ -306,7 +306,7 @@ class _SellerDetailsState extends State<SellerDetails> {
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                           child: FadeInImage.assetNetwork(
                             placeholder: 'assets/placeholder_rectangle.png',
-                            image:  i,
+                            image: i,
                             fit: BoxFit.fill,
                           ))),
                   Align(
@@ -594,7 +594,7 @@ class _SellerDetailsState extends State<SellerDetails> {
             borderRadius: BorderRadius.circular(5),
             child: FadeInImage.assetNetwork(
               placeholder: 'assets/placeholder.png',
-              image:  _shopDetails.logo,
+              image: _shopDetails.logo,
               fit: BoxFit.cover,
             )),
       ),
@@ -637,6 +637,7 @@ class _SellerDetailsState extends State<SellerDetails> {
           allowHalfRating: true,
           itemCount: 5,
           ratingWidget: RatingWidget(
+            half: Icon(FontAwesome.star, color: Colors.amber),
             full: Icon(FontAwesome.star, color: Colors.amber),
             empty:
                 Icon(FontAwesome.star, color: Color.fromRGBO(224, 224, 225, 1)),
