@@ -26,15 +26,15 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   http: ^0.13.4
-  provider: ^5.0.0
-  flutter_math_fork: ^0.3.3+1
+  provider: ^6.0.0
+  # flutter_math_fork: ^0.5.0
   json_annotation: ^4.1.0
   logging: ^1.0.2
   connectivity: ^3.0.6
   shimmer: ^2.0.0
   bordered_text: ^2.0.0
   flutter_html: ^2.1.5
-  flutter_svg: ^0.22.0
+  flutter_svg: ^0.23.0+1
   url_launcher: ^6.0.12
   toast: ^0.1.5
   shared_preferences: ^2.0.8
@@ -74,6 +74,9 @@ dependencies:
   photo_view: ^0.13.0
   intl: ^0.17.0
   twitter_login: ^4.0.1
+  flutter_math_fork: ^0.5.0
+dependency_overrides:
+  provider: ^6.0.0
 
 dev_dependencies:
   flutter_test:
