@@ -22,6 +22,8 @@ class AuthRepository {
     });
 
     Uri url = Uri.parse("${AppConfig.BASE_URL}/auth/login");
+
+    print(url);
     final response = await http.post(url,
         headers: {
           "Accept": "*/*",
@@ -29,7 +31,7 @@ class AuthRepository {
           "App-Language": app_language.$,
         },
         body: post_body);
-
+    print("loginresponse"+response.body);
     return loginResponseFromJson(response.body);
   }
 

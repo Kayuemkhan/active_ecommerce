@@ -83,38 +83,43 @@ class _LoginState extends State<Login> {
       ToastComponent.showDialog(loginResponse.message, context,
           gravity: Toast.CENTER, duration: Toast.LENGTH_LONG);
       AuthHelper().setUserData(loginResponse);
-      // push notification starts
-      if (OtherConfig.USE_PUSH_NOTIFICATION) {
-        final FirebaseMessaging _fcm = FirebaseMessaging.instance;
-
-        await _fcm.requestPermission(
-          alert: true,
-          announcement: false,
-          badge: true,
-          carPlay: false,
-          criticalAlert: false,
-          provisional: false,
-          sound: true,
-        );
-
-        String fcmToken = await _fcm.getToken();
-
-        if (fcmToken != null) {
-          print("--fcm token--");
-          print(fcmToken);
-          if (is_logged_in.$ == true) {
-            // update device token
-            var deviceTokenUpdateResponse = await ProfileRepository()
-                .getDeviceTokenUpdateResponse(fcmToken);
-          }
-        }
-      }
-
-      //push norification ends
 
       Navigator.push(context, MaterialPageRoute(builder: (context) {
         return Main();
       }));
+
+      // push notification starts
+      // if (OtherConfig.USE_PUSH_NOTIFICATION) {
+      //   final FirebaseMessaging _fcm = FirebaseMessaging.instance;
+      //
+      //   await _fcm.requestPermission(
+      //     alert: true,
+      //     announcement: false,
+      //     badge: true,
+      //     carPlay: false,
+      //     criticalAlert: false,
+      //     provisional: false,
+      //     sound: true,
+      //   );
+      //
+      //   String fcmToken = await _fcm.getToken();
+      //
+      //   if (fcmToken != null) {
+      //     print("--fcm token--");
+      //     print(fcmToken);
+      //     if (is_logged_in.$ == true) {
+      //       // update device token
+      //       var deviceTokenUpdateResponse = await ProfileRepository()
+      //           .getDeviceTokenUpdateResponse(fcmToken);
+      //     }
+      //   }
+      // }
+      //
+      // //push norification ends
+      //
+      // Navigator.push(context, MaterialPageRoute(builder: (context) {
+      //   return Main();
+      // }));
     }
   }
 
