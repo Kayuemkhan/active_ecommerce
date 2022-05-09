@@ -75,13 +75,13 @@ class _SplashState extends State<Splash> {
         style: TextStyle(
           fontWeight: FontWeight.w400,
           fontSize: 13.0,
-          color: Colors.white,
+          color: Colors.black,
         ),
       ),
       image: Image.asset("assets/splash_screen_logo.png"),
       backgroundImage:
           Image.asset("assets/splash_login_registration_background_image.png"),
-      backgroundColor: MyTheme.splash_screen_color,
+      backgroundColor:Colors.white,
       photoSize: 60.0,
       backgroundPhotoSize: 140.0,
     );
