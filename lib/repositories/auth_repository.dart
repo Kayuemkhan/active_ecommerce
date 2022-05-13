@@ -112,7 +112,7 @@ class AuthRepository {
   }
 
   Future<ConfirmCodeResponse> getConfirmCodeResponse(
-      @required int user_id, @required String verification_code) async {
+      int user_id, String verification_code) async {
     var post_body = jsonEncode(
         {"user_id": "$user_id", "verification_code": "$verification_code"});
 
