@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 var this_year = DateTime.now().year.toString();
 
 class AppConfig {
-  static String copyright_text = "AlauanShop. Develop By LeoSoft" + this_year; //this shows in the splash screen
+  static String copyright_text = "©Alayan Shop | Develop By LeoSoft"; //this shows in the splash screen
   static String app_name = "Alayan Shop"; //this shows in the splash screen
   static String purchase_code = "f4b3408e-cb0d-4aac-8ff4-274951b3df2b"; //enter your purchase code for the app from codecanyon
   // static String purchase_code = ""; //enter your purchase code for the app from codecanyon
