@@ -431,7 +431,7 @@ backgroundColor: Colors.white,
             decoration: BoxDecoration(
                 border: Border.all(color: MyTheme.textfield_grey, width: 1),
                 borderRadius: const BorderRadius.all(Radius.circular(8.0))),
-            child: FlatButton(
+            child: MaterialButton(
               minWidth: MediaQuery.of(context).size.width,
               //height: 50,
               color: Color.fromRGBO(252, 252, 252, 1),
@@ -529,7 +529,7 @@ backgroundColor: Colors.white,
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: FlatButton(
+                        child: MaterialButton(
                           minWidth: 75,
                           height: 30,
                           color: Color.fromRGBO(253, 253, 253, 1),
@@ -553,7 +553,7 @@ backgroundColor: Colors.white,
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 28.0),
-                        child: FlatButton(
+                        child: MaterialButton(
                           minWidth: 75,
                           height: 30,
                           color: MyTheme.accent_color,

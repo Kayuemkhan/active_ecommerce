@@ -247,7 +247,7 @@ backgroundColor: Colors.white,
                 child: SizedBox(
                   width: 24,
                   height: 24,
-                  child: FlatButton(
+                  child: MaterialButton(
                     padding: EdgeInsets.all(0),
                     child: Icon(
                       Icons.edit,
@@ -380,7 +380,7 @@ backgroundColor: Colors.white,
                             Border.all(color: MyTheme.textfield_grey, width: 1),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(8.0))),
-                    child: FlatButton(
+                    child: MaterialButton(
                       minWidth: MediaQuery.of(context).size.width,
                       //height: 50,
                       color: MyTheme.accent_color,

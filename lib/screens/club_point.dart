@@ -85,7 +85,7 @@ class _ClubpointState extends State<Clubpoint> {
     } else {
       /*ToastComponent.showDialog(clubpointToWalletResponse.message, context,
           gravity: Toast.CENTER, duration: Toast.LENGTH_LONG);*/
-      Scaffold.of(context).showSnackBar(_convertedSnackbar);
+
 
       _converted_ids.add(item_id);
       setState(() {
@@ -284,7 +284,7 @@ backgroundColor: Colors.white,
                       height: 24,
                       width: 80,
 
-                      child: FlatButton(
+                      child: MaterialButton(
                         color: MyTheme.accent_color,
                         child: Text(
                           AppLocalizations.of(context).club_point_screen_convert,

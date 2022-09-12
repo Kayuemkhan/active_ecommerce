@@ -228,7 +228,7 @@ class _PasswordForgetState extends State<PasswordForget> {
                                     color: MyTheme.textfield_grey, width: 1),
                                 borderRadius: const BorderRadius.all(
                                     Radius.circular(12.0))),
-                            child: FlatButton(
+                            child: MaterialButton(
                               minWidth: MediaQuery.of(context).size.width,
                               //height: 50,
                               color: MyTheme.accent_color,

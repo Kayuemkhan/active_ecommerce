@@ -16,7 +16,6 @@ import 'package:active_ecommerce_flutter/repositories/payment_repository.dart';
 import 'package:active_ecommerce_flutter/repositories/cart_repository.dart';
 import 'package:active_ecommerce_flutter/repositories/coupon_repository.dart';
 import 'package:active_ecommerce_flutter/helpers/shimmer_helper.dart';
-import 'package:active_ecommerce_flutter/app_config.dart';
 import 'package:active_ecommerce_flutter/custom/toast_component.dart';
 import 'package:toast/toast.dart';
 import 'package:active_ecommerce_flutter/screens/offline_screen.dart';
@@ -617,7 +616,7 @@ Navigator.pop(loadingcontext);
                 ),
               ),
               actions: [
-                FlatButton(
+                MaterialButton(
                   child: Text(
                     AppLocalizations.of(context).common_close_in_all_lower,
                     style: TextStyle(color: MyTheme.medium_grey),
@@ -742,7 +741,7 @@ Navigator.pop(loadingcontext);
             ? Container(
                 width: (MediaQuery.of(context).size.width - 32) * (1 / 3),
                 height: 42,
-                child: FlatButton(
+                child: MaterialButton(
                   minWidth: MediaQuery.of(context).size.width,
                   //height: 50,
                   color: MyTheme.accent_color,
@@ -766,7 +765,7 @@ Navigator.pop(loadingcontext);
             : Container(
                 width: (MediaQuery.of(context).size.width - 32) * (1 / 3),
                 height: 42,
-                child: FlatButton(
+                child: MaterialButton(
                   minWidth: MediaQuery.of(context).size.width,
                   //height: 50,
                   color: MyTheme.accent_color,
@@ -946,7 +945,7 @@ Navigator.pop(loadingcontext);
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            FlatButton(
+            MaterialButton(
               minWidth: MediaQuery.of(context).size.width,
               height: 50,
               color: MyTheme.accent_color,

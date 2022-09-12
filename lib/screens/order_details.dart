@@ -246,7 +246,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(right: 8.0),
-                      child: FlatButton(
+                      child: MaterialButton(
                         minWidth: 75,
                         height: 30,
                         color: Color.fromRGBO(253, 253, 253, 1),
@@ -272,7 +272,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 28.0),
-                      child: FlatButton(
+                      child: MaterialButton(
                         minWidth: 75,
                         height: 30,
                         color: MyTheme.accent_color,
@@ -331,27 +331,27 @@ class _OrderDetailsState extends State<OrderDetails> {
     Navigator.of(context, rootNavigator: true).pop();
     _refundReasonController.clear();
 
-    Scaffold.of(context).showSnackBar(SnackBar(
-      content: Text(
-        refundRequestSendResponse.message,
-        style: TextStyle(color: MyTheme.font_grey),
-      ),
-      backgroundColor: MyTheme.soft_accent_color,
-      duration: const Duration(seconds: 3),
-      action: SnackBarAction(
-        label: AppLocalizations.of(context)
-            .order_details_screen_refund_snackbar_show_request_list,
-        onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return RefundRequest();
-          })).then((value) {
-            onPopped(value);
-          });
-        },
-        textColor: MyTheme.accent_color,
-        disabledTextColor: Colors.grey,
-      ),
-    ));
+    // Scaffold.of(context).showSnackBar(SnackBar(
+    //   content: Text(
+    //     refundRequestSendResponse.message,
+    //     style: TextStyle(color: MyTheme.font_grey),
+    //   ),
+    //   backgroundColor: MyTheme.soft_accent_color,
+    //   duration: const Duration(seconds: 3),
+    //   action: SnackBarAction(
+    //     label: AppLocalizations.of(context)
+    //         .order_details_screen_refund_snackbar_show_request_list,
+    //     onPressed: () {
+    //       Navigator.push(context, MaterialPageRoute(builder: (context) {
+    //         return RefundRequest();
+    //       })).then((value) {
+    //         onPopped(value);
+    //       });
+    //     },
+    //     textColor: MyTheme.accent_color,
+    //     disabledTextColor: Colors.grey,
+    //   ),
+    // ));
 
     reset();
     fetchAll();
@@ -1384,7 +1384,7 @@ class _OrderDetailsState extends State<OrderDetails> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           _orderDetails != null && _orderDetails.manually_payable
-              ? FlatButton(
+              ? MaterialButton(
                   color: MyTheme.soft_accent_color,
                   child: Text(
                     AppLocalizations.of(context)

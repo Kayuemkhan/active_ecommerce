@@ -630,7 +630,7 @@ class _FilterState extends State<Filter> {
                               );
                             }),
                             actions: [
-                              FlatButton(
+                              MaterialButton(
                                 child: Text(
                                   AppLocalizations.of(context).common_close_in_all_capital,
                                   style: TextStyle(color: MyTheme.medium_grey),
@@ -929,7 +929,7 @@ class _FilterState extends State<Filter> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    FlatButton(
+                    MaterialButton(
                       color: Color.fromRGBO(234, 67, 53, 1),
                       shape: RoundedRectangleBorder(
                         side:
@@ -949,7 +949,7 @@ class _FilterState extends State<Filter> {
                         });
                       },
                     ),
-                    FlatButton(
+                    MaterialButton(
                       color: Color.fromRGBO(52, 168, 83, 1),
                       child: Text(
                         "APPLY",

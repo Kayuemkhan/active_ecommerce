@@ -731,7 +731,7 @@ class _ShippingInfoState extends State<ShippingInfo> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            FlatButton(
+            MaterialButton(
               minWidth: MediaQuery.of(context).size.width,
               height: 50,
               color: MyTheme.accent_color,
@@ -801,7 +801,7 @@ class _ShippingInfoState extends State<ShippingInfo> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      FlatButton(
+                      MaterialButton(
                         padding: EdgeInsets.zero,
                         onPressed: () {
                           setState(() {
@@ -823,7 +823,7 @@ class _ShippingInfoState extends State<ShippingInfo> {
                       ),
                       Container(width: 0.5,height: 30,color: MyTheme.grey_153,),
 
-                      FlatButton(
+                      MaterialButton(
                         padding: EdgeInsets.zero,
                         onPressed: () {
                           setState(() {

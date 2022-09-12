@@ -200,7 +200,7 @@ class _AddressState extends State<Address> {
                 ),
               ),
               actions: [
-                FlatButton(
+                MaterialButton(
                   child: Text(
                     AppLocalizations.of(context).common_cancel_ucfirst,
                     style: TextStyle(color: MyTheme.medium_grey),
@@ -209,7 +209,7 @@ class _AddressState extends State<Address> {
                     Navigator.of(context, rootNavigator: true).pop();
                   },
                 ),
-                FlatButton(
+                MaterialButton(
                   color: MyTheme.soft_accent_color,
                   child: Text(
                     AppLocalizations.of(context).common_confirm_ucfirst,
@@ -482,7 +482,7 @@ class _AddressState extends State<Address> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: FlatButton(
+                  child: MaterialButton(
                     minWidth: MediaQuery.of(context).size.width - 16,
                     height: 60,
                     color: Color.fromRGBO(252, 252, 252, 1),
@@ -938,7 +938,7 @@ class _AddressState extends State<Address> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(right: 8.0),
-                      child: FlatButton(
+                      child: MaterialButton(
                         minWidth: 75,
                         height: 30,
                         color: Color.fromRGBO(253, 253, 253, 1),
@@ -962,7 +962,7 @@ class _AddressState extends State<Address> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 28.0),
-                      child: FlatButton(
+                      child: MaterialButton(
                         minWidth: 75,
                         height: 30,
                         color: MyTheme.accent_color,
@@ -1428,7 +1428,7 @@ class _AddressState extends State<Address> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(right: 8.0),
-                      child: FlatButton(
+                      child: MaterialButton(
                         minWidth: 75,
                         height: 30,
                         color: Color.fromRGBO(253, 253, 253, 1),
@@ -1453,7 +1453,7 @@ class _AddressState extends State<Address> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 28.0),
-                      child: FlatButton(
+                      child: MaterialButton(
                         minWidth: 75,
                         height: 30,
                         color: MyTheme.accent_color,
@@ -1849,7 +1849,7 @@ class _AddressState extends State<Address> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              FlatButton(
+              MaterialButton(
                 minWidth: MediaQuery.of(context).size.width,
                 height: 50,
                 color: MyTheme.accent_color,

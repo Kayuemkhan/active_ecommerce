@@ -369,7 +369,7 @@ class _ProductReviewsState extends State<ProductReviews> {
                     Builder(
                       builder: (context) {
                         var controller = ExpandableController.of(context);
-                        return FlatButton(
+                        return ElevatedButton(
                           child: Text(
                             !controller.expanded
                                 ? AppLocalizations.of(context).common_view_more

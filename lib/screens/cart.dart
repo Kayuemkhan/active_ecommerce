@@ -139,7 +139,7 @@ class _CartState extends State<Cart> {
             ),
           ),
           actions: [
-            FlatButton(
+            MaterialButton(
               child: Text(
                 AppLocalizations.of(context).cart_screen_cancel,
                 style: TextStyle(color: MyTheme.medium_grey),
@@ -148,7 +148,7 @@ class _CartState extends State<Cart> {
                 Navigator.of(context, rootNavigator: true).pop();
               },
             ),
-            FlatButton(
+            MaterialButton(
               color: MyTheme.soft_accent_color,
               child: Text(
                 AppLocalizations.of(context).cart_screen_confirm,
@@ -370,7 +370,7 @@ class _CartState extends State<Cart> {
                           topRight: const Radius.circular(0.0),
                           bottomRight: const Radius.circular(0.0),
                         )),
-                    child: FlatButton(
+                    child: MaterialButton(
                       minWidth: MediaQuery.of(context).size.width,
                       //height: 50,
                       color: MyTheme.light_grey,
@@ -423,7 +423,7 @@ class _CartState extends State<Cart> {
                           topRight: const Radius.circular(8.0),
                           bottomRight: const Radius.circular(8.0),
                         )),
-                    child: FlatButton(
+                    child: MaterialButton(
                       minWidth: MediaQuery.of(context).size.width,
                       //height: 50,
                       color: MyTheme.accent_color,
@@ -684,7 +684,7 @@ class _CartState extends State<Cart> {
               SizedBox(
                 width: 28,
                 height: 28,
-                child: FlatButton(
+                child: MaterialButton(
                   padding: EdgeInsets.all(0),
                   child: Icon(
                     Icons.add,
@@ -713,7 +713,7 @@ class _CartState extends State<Cart> {
               SizedBox(
                 width: 28,
                 height: 28,
-                child: FlatButton(
+                child: MaterialButton(
                   padding: EdgeInsets.all(0),
                   child: Icon(
                     Icons.remove,

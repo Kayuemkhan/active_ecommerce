@@ -56,11 +56,11 @@ class PushNotificationService {
           subtitle: Text(message.notification.body),
         ),
         actions: <Widget>[
-          FlatButton(
+          MaterialButton(
             child: Text('close'),
             onPressed: () => Navigator.of(context).pop(),
           ),
-          FlatButton(
+          MaterialButton(
             child: Text('GO'),
             onPressed: () {
               if (is_logged_in.$ == false) {
@@ -93,11 +93,11 @@ class PushNotificationService {
             title: new Text("You are not logged in"),
             content: new Text("Please log in"),
             actions: <Widget>[
-              FlatButton(
+              MaterialButton(
                 child: Text('close'),
                 onPressed: () => Navigator.of(context).pop(),
               ),
-              FlatButton(
+              MaterialButton(
                   child: Text('Login'),
                   onPressed: () {
                     Navigator.of(context).pop();
