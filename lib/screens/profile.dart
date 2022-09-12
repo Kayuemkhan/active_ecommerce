@@ -615,7 +615,7 @@ class _ProfileState extends State<Profile> {
             padding: const EdgeInsets.only(top: 16.0),
             child: Container(
               height: 24,
-              child: FlatButton(
+              child: MaterialButton(
                 color: Colors.green,
                 // 	rgb(50,205,50)
                 shape: RoundedRectangleBorder(

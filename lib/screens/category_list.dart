@@ -341,7 +341,7 @@ class _CategoryListState extends State<CategoryList> {
               child: Container(
                 width: (MediaQuery.of(context).size.width - 32),
                 height: 40,
-                child: FlatButton(
+                child: MaterialButton(
                   minWidth: MediaQuery.of(context).size.width,
                   //height: 50,
                   color: MyTheme.accent_color,

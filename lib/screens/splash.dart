@@ -54,37 +54,54 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    return CustomSplashScreen(
-      //comment this
-      seconds: 3,
+    return
+      Scaffold(
+        body:
+
+        Container(
+          decoration: new BoxDecoration(
+              gradient: new LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.fromARGB(255, 25, 178, 238),
+                  Color.fromARGB(255, 21,236,229)
+                ],
+              )),
+          child:
 
 
-      //comment this
-      navigateAfterSeconds: Main(),
+        CustomSplashScreen(
+        //comment this
+        seconds: 3,
 
 
-      //navigateAfterFuture: loadFromFuture(), //uncomment this
-      title: Text(
-        "V " + _packageInfo.version,
-        style: TextStyle(
-            fontWeight: FontWeight.bold, fontSize: 14.0, color: Colors.white),
-      ),
-      useLoader: false,
-      loadingText: Text(
-        AppConfig.copyright_text,
-        style: TextStyle(
-          fontWeight: FontWeight.w400,
-          fontSize: 13.0,
-          color: Colors.white,
+        //comment this
+        navigateAfterSeconds: Main(),
+
+
+        //navigateAfterFuture: loadFromFuture(), //uncomment this
+        title: Text(
+          "V " + _packageInfo.version,
+          style: TextStyle(
+              fontWeight: FontWeight.bold, fontSize: 14.0, color: Colors.white),
         ),
-      ),
-      image: Image.asset("assets/splash_screen_logo.png"),
-      backgroundImage:
-          Image.asset("assets/splash_login_registration_background_image.png"),
-      backgroundColor: MyTheme.splash_screen_color,
-      photoSize: 60.0,
-      backgroundPhotoSize: 140.0,
-    );
+        useLoader: false,
+        loadingText: Text(
+          AppConfig.copyright_text,
+          style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 13.0,
+            color: Colors.black,
+          ),
+        ),
+        image: Image.asset("assets/logo_splash_screen.png"),
+
+        backgroundColor:Colors.white,
+        photoSize: 60.0,
+        backgroundPhotoSize: 140.0,
+    ),
+      ));
   }
 }
 
@@ -310,7 +327,14 @@ class _CustomSplashScreenState extends State<CustomSplashScreen> {
                           fit: BoxFit.cover,
                           image: widget.imageBackground,
                         ),
-                  gradient: widget.gradientBackground,
+            gradient: new LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Color.fromARGB(255, 25, 178, 238),
+                Color.fromARGB(255, 21,236,229)
+              ],
+            ),
                   color: widget.backgroundColor,
                 ),
               ),

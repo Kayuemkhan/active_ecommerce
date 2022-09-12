@@ -359,7 +359,7 @@ class _SellerDetailsState extends State<SellerDetails> {
   }
 
   buildShowProductsButton(BuildContext context) {
-    return FlatButton(
+    return MaterialButton(
       minWidth: MediaQuery.of(context).size.width,
       height: 50,
       color: MyTheme.accent_color,
@@ -557,7 +557,7 @@ class _SellerDetailsState extends State<SellerDetails> {
                             ),
                           ),
                           actions: [
-                            FlatButton(
+                            MaterialButton(
                               child: Text(
                                 AppLocalizations.of(context)
                                     .common_close_in_all_capital,

@@ -117,11 +117,7 @@ class _RegistrationState extends State<Registration> {
         backgroundColor: Colors.white,
         body: Stack(
           children: [
-            Container(
-              width: _screen_width * (3 / 4),
-              child: Image.asset(
-                  "assets/splash_login_registration_background_image.png"),
-            ),
+
             Container(
               width: double.infinity,
               child: SingleChildScrollView(
@@ -342,7 +338,7 @@ class _RegistrationState extends State<Registration> {
                                     color: MyTheme.textfield_grey, width: 1),
                                 borderRadius: const BorderRadius.all(
                                     Radius.circular(12.0))),
-                            child: FlatButton(
+                            child: MaterialButton(
                               minWidth: MediaQuery.of(context).size.width,
                               //height: 50,
                               color: MyTheme.accent_color,
@@ -380,7 +376,7 @@ class _RegistrationState extends State<Registration> {
                                     color: MyTheme.textfield_grey, width: 1),
                                 borderRadius: const BorderRadius.all(
                                     Radius.circular(12.0))),
-                            child: FlatButton(
+                            child: MaterialButton(
                               minWidth: MediaQuery.of(context).size.width,
                               //height: 50,
                               color: MyTheme.golden,

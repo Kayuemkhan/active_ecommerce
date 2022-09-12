@@ -22,6 +22,8 @@ class AuthRepository {
     });
 
     Uri url = Uri.parse("${AppConfig.BASE_URL}/auth/login");
+
+    print(url);
     final response = await http.post(url,
         headers: {
           "Accept": "*/*",
@@ -29,7 +31,7 @@ class AuthRepository {
           "App-Language": app_language.$,
         },
         body: post_body);
-
+    print("loginresponse"+response.body);
     return loginResponseFromJson(response.body);
   }
 
@@ -110,7 +112,7 @@ class AuthRepository {
   }
 
   Future<ConfirmCodeResponse> getConfirmCodeResponse(
-      @required int user_id, @required String verification_code) async {
+      int user_id, String verification_code) async {
     var post_body = jsonEncode(
         {"user_id": "$user_id", "verification_code": "$verification_code"});
 

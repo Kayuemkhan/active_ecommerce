@@ -332,7 +332,7 @@ class _ProductDetailsState extends State<ProductDetails> {
     } else {
       if (mode == "add_to_cart") {
         if (snackbar != null && context != null) {
-          Scaffold.of(context).showSnackBar(snackbar);
+          // Scaffold.of(context).showSnackBar(snackbar);
         }
         reset();
         fetchAll();
@@ -380,7 +380,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(bottom: 8.0),
-                        child: FlatButton(
+                        child: MaterialButton(
                           minWidth: 75,
                           height: 26,
                           color: Color.fromRGBO(253, 253, 253, 1),
@@ -413,7 +413,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                           : Container(),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 8.0),
-                        child: FlatButton(
+                        child: MaterialButton(
                           minWidth: 75,
                           height: 26,
                           color: Colors.blue,
@@ -444,7 +444,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       padding: app_language_rtl.$
                           ? EdgeInsets.only(left: 8.0)
                           : EdgeInsets.only(right: 8.0),
-                      child: FlatButton(
+                      child: MaterialButton(
                         minWidth: 75,
                         height: 30,
                         color: Color.fromRGBO(253, 253, 253, 1),
@@ -586,7 +586,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: FlatButton(
+                        child: MaterialButton(
                           minWidth: 75,
                           height: 30,
                           color: Color.fromRGBO(253, 253, 253, 1),
@@ -611,7 +611,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 28.0),
-                        child: FlatButton(
+                        child: MaterialButton(
                           minWidth: 75,
                           height: 30,
                           color: MyTheme.accent_color,
@@ -1790,7 +1790,7 @@ class _ProductDetailsState extends State<ProductDetails> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              FlatButton(
+              MaterialButton(
                 minWidth: MediaQuery.of(context).size.width / 2 - .5,
                 height: 50,
                 color: MyTheme.golden,
@@ -1812,7 +1812,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               SizedBox(
                 width: 1,
               ),
-              FlatButton(
+              MaterialButton(
                 minWidth: MediaQuery.of(context).size.width / 2 - .5,
                 height: 50,
                 color: MyTheme.accent_color,
@@ -1967,7 +1967,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               Builder(
                 builder: (context) {
                   var controller = ExpandableController.of(context);
-                  return FlatButton(
+                  return MaterialButton(
                     child: Text(
                       !controller.expanded
                           ? AppLocalizations.of(context).common_view_more

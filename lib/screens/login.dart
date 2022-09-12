@@ -1,6 +1,5 @@
 import 'package:active_ecommerce_flutter/app_config.dart';
 import 'package:active_ecommerce_flutter/my_theme.dart';
-import 'package:active_ecommerce_flutter/other_config.dart';
 import 'package:active_ecommerce_flutter/social_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -16,10 +15,7 @@ import 'package:toast/toast.dart';
 import 'package:active_ecommerce_flutter/repositories/auth_repository.dart';
 import 'package:active_ecommerce_flutter/helpers/auth_helper.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:active_ecommerce_flutter/helpers/shared_value_helper.dart';
-import 'package:active_ecommerce_flutter/repositories/profile_repository.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:twitter_login/twitter_login.dart';
 
@@ -83,38 +79,43 @@ class _LoginState extends State<Login> {
       ToastComponent.showDialog(loginResponse.message, context,
           gravity: Toast.CENTER, duration: Toast.LENGTH_LONG);
       AuthHelper().setUserData(loginResponse);
-      // push notification starts
-      if (OtherConfig.USE_PUSH_NOTIFICATION) {
-        final FirebaseMessaging _fcm = FirebaseMessaging.instance;
-
-        await _fcm.requestPermission(
-          alert: true,
-          announcement: false,
-          badge: true,
-          carPlay: false,
-          criticalAlert: false,
-          provisional: false,
-          sound: true,
-        );
-
-        String fcmToken = await _fcm.getToken();
-
-        if (fcmToken != null) {
-          print("--fcm token--");
-          print(fcmToken);
-          if (is_logged_in.$ == true) {
-            // update device token
-            var deviceTokenUpdateResponse = await ProfileRepository()
-                .getDeviceTokenUpdateResponse(fcmToken);
-          }
-        }
-      }
-
-      //push norification ends
 
       Navigator.push(context, MaterialPageRoute(builder: (context) {
         return Main();
       }));
+
+      // push notification starts
+      // if (OtherConfig.USE_PUSH_NOTIFICATION) {
+      //   final FirebaseMessaging _fcm = FirebaseMessaging.instance;
+      //
+      //   await _fcm.requestPermission(
+      //     alert: true,
+      //     announcement: false,
+      //     badge: true,
+      //     carPlay: false,
+      //     criticalAlert: false,
+      //     provisional: false,
+      //     sound: true,
+      //   );
+      //
+      //   String fcmToken = await _fcm.getToken();
+      //
+      //   if (fcmToken != null) {
+      //     print("--fcm token--");
+      //     print(fcmToken);
+      //     if (is_logged_in.$ == true) {
+      //       // update device token
+      //       var deviceTokenUpdateResponse = await ProfileRepository()
+      //           .getDeviceTokenUpdateResponse(fcmToken);
+      //     }
+      //   }
+      // }
+      //
+      // //push norification ends
+      //
+      // Navigator.push(context, MaterialPageRoute(builder: (context) {
+      //   return Main();
+      // }));
     }
   }
 
@@ -230,15 +231,12 @@ class _LoginState extends State<Login> {
     final _screen_width = MediaQuery.of(context).size.width;
     return Directionality(
       textDirection: app_language_rtl.$ ? TextDirection.rtl : TextDirection.ltr,
-      child: Scaffold(
+      child:
+      Scaffold(
         backgroundColor: Colors.white,
         body: Stack(
           children: [
-            Container(
-              width: _screen_width * (3 / 4),
-              child: Image.asset(
-                  "assets/splash_login_registration_background_image.png"),
-            ),
+
             Container(
               width: double.infinity,
               child: SingleChildScrollView(
@@ -425,10 +423,10 @@ class _LoginState extends State<Login> {
                                     color: MyTheme.textfield_grey, width: 1),
                                 borderRadius: const BorderRadius.all(
                                     Radius.circular(12.0))),
-                            child: FlatButton(
+                            child: MaterialButton(
                               minWidth: MediaQuery.of(context).size.width,
                               //height: 50,
-                              color: MyTheme.golden,
+                              color: MyTheme.login,
                               shape: RoundedRectangleBorder(
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(12.0))),
@@ -463,7 +461,7 @@ class _LoginState extends State<Login> {
                                     color: MyTheme.textfield_grey, width: 1),
                                 borderRadius: const BorderRadius.all(
                                     Radius.circular(12.0))),
-                            child: FlatButton(
+                            child: MaterialButton(
                               minWidth: MediaQuery.of(context).size.width,
                               //height: 50,
                               color: MyTheme.accent_color,

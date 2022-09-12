@@ -194,7 +194,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
       },
       child: Directionality(
         textDirection: app_language_rtl.$ ? TextDirection.rtl : TextDirection.ltr,
-        child: Scaffold(
+        child:
+        Scaffold(
             key: _scaffoldKey,
             backgroundColor: Colors.white,
             appBar: buildAppBar(statusBarHeight, context),

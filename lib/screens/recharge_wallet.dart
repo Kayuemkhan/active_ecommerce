@@ -438,7 +438,7 @@ class _RechargeWalletState extends State<RechargeWallet> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            FlatButton(
+            MaterialButton(
               minWidth: MediaQuery.of(context).size.width,
               height: 50,
               color: MyTheme.accent_color,

@@ -376,7 +376,7 @@ class _OfflineState extends State<OfflineScreen> {
                             Border.all(color: MyTheme.textfield_grey, width: 1),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(8.0))),
-                    child: FlatButton(
+                    child: MaterialButton(
                       minWidth: MediaQuery.of(context).size.width,
                       //height: 50,
                       color: MyTheme.medium_grey,
@@ -418,7 +418,7 @@ class _OfflineState extends State<OfflineScreen> {
                             Border.all(color: MyTheme.textfield_grey, width: 1),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(8.0))),
-                    child: FlatButton(
+                    child: MaterialButton(
                       minWidth: MediaQuery.of(context).size.width,
                       //height: 50,
                       color: MyTheme.accent_color,

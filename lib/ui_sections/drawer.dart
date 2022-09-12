@@ -14,6 +14,10 @@ import 'package:active_ecommerce_flutter/helpers/shared_value_helper.dart';
 import 'package:active_ecommerce_flutter/app_config.dart';
 import 'package:active_ecommerce_flutter/helpers/auth_helper.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:toast/toast.dart';
+
+import '../custom/toast_component.dart';
+import '../repositories/auth_repository.dart';
 
 class MainDrawer extends StatefulWidget {
   const MainDrawer({
@@ -28,16 +32,16 @@ class _MainDrawerState extends State<MainDrawer> {
   onTapLogout(context) async {
     AuthHelper().clearUserData();
 
-    // var logoutResponse = await AuthRepository().getLogoutResponse();
-    //
-    // if (logoutResponse.result == true) {
-    //   ToastComponent.showDialog(logoutResponse.message, context,
-    //       gravity: Toast.CENTER, duration: Toast.LENGTH_LONG);
-    //
-    //   Navigator.push(context, MaterialPageRoute(builder: (context) {
-    //     return Login();
-    //   }));
-    // }
+    var logoutResponse = await AuthRepository().getLogoutResponse();
+
+    if (logoutResponse.result == true) {
+      ToastComponent.showDialog(logoutResponse.message, context,
+          gravity: Toast.CENTER, duration: Toast.LENGTH_LONG);
+
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return Login();
+      }));
+    }
     Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) {
       return Main();
     }),(route)=>false);

@@ -511,7 +511,7 @@ class CustomSelectorButton extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(5.0),
                     bottomLeft: Radius.circular(5.0))),
-            child: FlatButton(
+            child: MaterialButton(
               key: Key(TestHelper.DropdownButtonKeyValue),
               padding: EdgeInsets.zero,
               minWidth: 0,

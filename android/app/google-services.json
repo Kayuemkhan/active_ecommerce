@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "620463100599",
-    "project_id": "testproject-43",
-    "storage_bucket": "testproject-43.appspot.com"
+    "project_number": "819988189942",
+    "project_id": "alayanshop",
+    "storage_bucket": "alayanshop.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:620463100599:android:1e52dbe5dcadaf75253332",
+        "mobilesdk_app_id": "1:819988189942:android:b2aaccdf2dc781c27e12d7",
         "android_client_info": {
-          "package_name": "com.activeitzone.active_ecommerce_flutter_app"
+          "package_name": "com.activeitzone.active_ecommerce"
         }
       },
       "oauth_client": [
         {
-          "client_id": "620463100599-ncumjpgaqm59govrls95jku9vrmm85ih.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.activeitzone.active_ecommerce_flutter_app",
-            "certificate_hash": "8253b5fcc9a81b69352ef11409ae436ad37e5384"
-          }
-        },
-        {
-          "client_id": "620463100599-ndiqp3rvlvmvlccrkuj5bbi15h8v19p7.apps.googleusercontent.com",
+          "client_id": "819988189942-78sitbct4dkspe832ramfjlbkn0f81ms.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCfra9clKmJ1pb5CWetGeaQ4rYy_mMPsTM"
+          "current_key": "AIzaSyBhzAGsw8ZQOc-BLFmxRw-EjUArjmorxD4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "620463100599-ndiqp3rvlvmvlccrkuj5bbi15h8v19p7.apps.googleusercontent.com",
+              "client_id": "819988189942-78sitbct4dkspe832ramfjlbkn0f81ms.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
