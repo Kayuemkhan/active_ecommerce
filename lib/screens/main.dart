@@ -89,7 +89,7 @@ class _MainState extends State<Main> {
               onPressed: () {},
               tooltip: "start FAB",
               child: Container(
-                  margin: EdgeInsets.all(0.0),
+                  margin: EdgeInsets.only(bottom: 0.0),
                   child: IconButton(
                       icon: new Image.asset(
                           'assets/square_logo.png',
@@ -106,78 +106,78 @@ class _MainState extends State<Main> {
                           );
                         }));
                       })),
-              elevation: 0.0,
+              elevation: 10.0,
             ),
           ),
-          bottomNavigationBar: BottomAppBar(
-            color: Colors.transparent,
-            clipBehavior: Clip.antiAlias,
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 1.0, sigmaY: 1.0),
-              child: BottomNavigationBar(
-                type: BottomNavigationBarType.fixed,
-                onTap: onTapped,
-                currentIndex: _currentIndex,
-                backgroundColor: Colors.white.withOpacity(0.8),
-                fixedColor: Theme.of(context).accentColor,
-                unselectedItemColor: Color.fromRGBO(153, 153, 153, 1),
-                items: [
-                  BottomNavigationBarItem(
-                      icon: Image.asset(
-                        "assets/home.png",
-                        color: _currentIndex == 0
-                            ? Theme.of(context).accentColor
-                            : Color.fromRGBO(153, 153, 153, 1),
-                        height: 20,
-                      ),
-                      label: AppLocalizations.of(context)
-                          .main_screen_bottom_navigation_home
-                      ),
-                  BottomNavigationBarItem(
-                      icon: Image.asset(
-                        "assets/categories.png",
-                        color: _currentIndex == 1
-                            ? Theme.of(context).accentColor
-                            : Color.fromRGBO(153, 153, 153, 1),
-                        height: 20,
-                      ),
-                      label:  AppLocalizations.of(context)
-                          .main_screen_bottom_navigation_categories,
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(
-                      Icons.circle,
-                      color: Colors.transparent,
-                    ),
-                    label: "",
-                  ),
-                  BottomNavigationBarItem(
-                      icon: Image.asset(
-                        "assets/cart.png",
-                        color: _currentIndex == 3
-                            ? Theme.of(context).accentColor
-                            : Color.fromRGBO(153, 153, 153, 1),
-                        height: 20,
-                      ),
-                      label: AppLocalizations.of(context)
-                          .main_screen_bottom_navigation_cart
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Image.asset(
-                      "assets/profile.png",
-                      color: _currentIndex == 4
-                          ? Theme.of(context).accentColor
-                          : Color.fromRGBO(153, 153, 153, 1),
-                      height: 20,
-                    ),
-                    label: AppLocalizations.of(context)
-                        .main_screen_bottom_navigation_profile,
-
-                  ),
-                ],
-              ),
-            ),
-          ),
+          // bottomNavigationBar: BottomAppBar(
+          //   color: Colors.transparent,
+          //   clipBehavior: Clip.antiAlias,
+          //   child: BackdropFilter(
+          //     filter: ImageFilter.blur(sigmaX: 1.0, sigmaY: 1.0),
+          //     child: BottomNavigationBar(
+          //       type: BottomNavigationBarType.fixed,
+          //       onTap: onTapped,
+          //       currentIndex: _currentIndex,
+          //       backgroundColor: Colors.white.withOpacity(0.8),
+          //       fixedColor: Theme.of(context).accentColor,
+          //       unselectedItemColor: Color.fromRGBO(153, 153, 153, 1),
+          //       items: [
+          //         BottomNavigationBarItem(
+          //             icon: Image.asset(
+          //               "assets/home.png",
+          //               color: _currentIndex == 0
+          //                   ? Theme.of(context).accentColor
+          //                   : Color.fromRGBO(153, 153, 153, 1),
+          //               height: 20,
+          //             ),
+          //             label: AppLocalizations.of(context)
+          //                 .main_screen_bottom_navigation_home
+          //             ),
+          //         BottomNavigationBarItem(
+          //             icon: Image.asset(
+          //               "assets/categories.png",
+          //               color: _currentIndex == 1
+          //                   ? Theme.of(context).accentColor
+          //                   : Color.fromRGBO(153, 153, 153, 1),
+          //               height: 20,
+          //             ),
+          //             label:  AppLocalizations.of(context)
+          //                 .main_screen_bottom_navigation_categories,
+          //         ),
+          //         BottomNavigationBarItem(
+          //           icon: Icon(
+          //             Icons.circle,
+          //             color: Colors.transparent,
+          //           ),
+          //           label: "",
+          //         ),
+          //         BottomNavigationBarItem(
+          //             icon: Image.asset(
+          //               "assets/cart.png",
+          //               color: _currentIndex == 3
+          //                   ? Theme.of(context).accentColor
+          //                   : Color.fromRGBO(153, 153, 153, 1),
+          //               height: 20,
+          //             ),
+          //             label: AppLocalizations.of(context)
+          //                 .main_screen_bottom_navigation_cart
+          //         ),
+          //         BottomNavigationBarItem(
+          //           icon: Image.asset(
+          //             "assets/profile.png",
+          //             color: _currentIndex == 4
+          //                 ? Theme.of(context).accentColor
+          //                 : Color.fromRGBO(153, 153, 153, 1),
+          //             height: 20,
+          //           ),
+          //           label: AppLocalizations.of(context)
+          //               .main_screen_bottom_navigation_profile,
+          //
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
         ),
       ),
     );
