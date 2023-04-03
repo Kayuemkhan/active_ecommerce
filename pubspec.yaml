@@ -32,17 +32,17 @@ dependencies:
   connectivity:
   shimmer:
   bordered_text:
-  flutter_html:
+  flutter_html: ^2.1.5
   flutter_svg:
-  url_launcher:
-  toast:
+  url_launcher: ^6.0.12
+  toast: ^0.1.5
   shared_preferences:
   flutter_icons:
   dotted_line:
   timeline_list:
   progress_dialog:
   after_init:
-  webview_flutter:
+  webview_flutter: ^2.1.1
   clipboard:
   google_fonts:
   flutter_rating_bar:
@@ -65,7 +65,7 @@ dependencies:
   google_sign_in:
   firebase_messaging:
   one_context:
-  social_share:
+  social_share: ^2.2.1
   flutter_typeahead:
   photo_view:
   intl: ^0.17.0
