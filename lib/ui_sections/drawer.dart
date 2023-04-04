@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 
 import 'package:active_ecommerce_flutter/screens/main.dart';
@@ -212,7 +214,6 @@ class _MainDrawerState extends State<MainDrawer> {
                         ],
                       )
                     : Container(),
-                Divider(height: 24),
                 is_logged_in.$
                     == false
                     ? ListTile(
@@ -260,12 +261,15 @@ class _MainDrawerState extends State<MainDrawer> {
                           delegate: SliverChildListDelegate([
                             buildCategoryList(),
                             Container(
-                              height:  60 ,
+                              height:  200 ,
                             )
                           ]))
                     ],
                   ),
                 ),
+                SizedBox(
+                  height: 200,
+                )
               ],
             ),
           ),
@@ -275,7 +279,8 @@ class _MainDrawerState extends State<MainDrawer> {
   }
   buildCategoryList() {
     var future =
-        CategoryRepository().getTopCategories();
+    CategoryRepository()
+        .getCategories(parent_id: 0);
     return FutureBuilder(
         future: future,
         builder: (context, snapshot) {
@@ -289,6 +294,8 @@ class _MainDrawerState extends State<MainDrawer> {
           } else if (snapshot.hasData) {
             //snapshot.hasData
             var categoryResponse = snapshot.data;
+
+
             return SingleChildScrollView(
               child: ListView.builder(
                 itemCount: categoryResponse.categories.length,
@@ -298,7 +305,7 @@ class _MainDrawerState extends State<MainDrawer> {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(
-                        top: 4.0, bottom: 4.0, left: 16.0, right: 16.0),
+                        top: 0.0, bottom: 4.0, left: 16.0, right: 16.0),
                     child: buildCategoryItemCard(categoryResponse, index),
                   );
                 },
