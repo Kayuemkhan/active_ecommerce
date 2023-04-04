@@ -41,7 +41,7 @@ class _ProductCardState extends State<ProductCard> {
               Container(
                   width: double.infinity,
                   //height: 158,
-                  height: (( MediaQuery.of(context).size.width - 28 ) / 2) + 2,
+                  height: (( MediaQuery.of(context).size.width - 40 ) / 2) + 2,
                   child: ClipRRect(
                     clipBehavior: Clip.hardEdge,
                       borderRadius: BorderRadius.vertical(

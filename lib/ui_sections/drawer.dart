@@ -11,7 +11,6 @@ import 'package:active_ecommerce_flutter/screens/login.dart';
 import 'package:active_ecommerce_flutter/screens/messenger_list.dart';
 import 'package:active_ecommerce_flutter/screens/wallet.dart';
 import 'package:active_ecommerce_flutter/helpers/shared_value_helper.dart';
-import 'package:active_ecommerce_flutter/app_config.dart';
 import 'package:active_ecommerce_flutter/helpers/auth_helper.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:toast/toast.dart';
@@ -52,12 +51,15 @@ class _MainDrawerState extends State<MainDrawer> {
     return Drawer(
       child: Directionality(
         textDirection:
-            app_language_rtl.$ ? TextDirection.rtl : TextDirection.ltr,
+            app_language_rtl.$ ?
+            TextDirection.rtl :
+            TextDirection.ltr
+        ,
         child: Container(
           padding: EdgeInsets.only(top: 50),
           child: SingleChildScrollView(
             child: Column(
-              children: <Widget>[
+              children: [
                 is_logged_in.$ == true
                     ? ListTile(
                         leading: CircleAvatar(
@@ -182,7 +184,8 @@ class _MainDrawerState extends State<MainDrawer> {
                                 }));
                               }),
                           wallet_system_status.$
-                              ? ListTile(
+                              ?
+                          ListTile(
                                   visualDensity: VisualDensity(
                                       horizontal: -4, vertical: -4),
                                   leading: Image.asset("assets/wallet.png",
@@ -206,7 +209,8 @@ class _MainDrawerState extends State<MainDrawer> {
                       )
                     : Container(),
                 Divider(height: 24),
-                is_logged_in.$ == false
+                is_logged_in.$
+                    == false
                     ? ListTile(
                         visualDensity:
                             VisualDensity(horizontal: -4, vertical: -4),

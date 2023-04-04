@@ -1,7 +1,5 @@
-import 'dart:ui';
 
 import 'package:active_ecommerce_flutter/app_config.dart';
-import 'package:active_ecommerce_flutter/my_theme.dart';
 import 'package:active_ecommerce_flutter/screens/main.dart';
 import 'package:flutter/material.dart';
 import 'package:package_info/package_info.dart';
@@ -25,7 +23,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     //on Splash Screen hide statusbar
-    SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
     super.initState();
     _initPackageInfo();
   }
@@ -33,8 +31,8 @@ class _SplashState extends State<Splash> {
   @override
   void dispose() {
     //before going to other screen show statusbar
-    SystemChrome.setEnabledSystemUIOverlays(
-        [SystemUiOverlay.top, SystemUiOverlay.bottom]);
+    SystemChrome.setEnabledSystemUIMode(
+        SystemUiMode.manual, overlays: [SystemUiOverlay.top, SystemUiOverlay.bottom]);
     super.dispose();
   }
 
@@ -56,18 +54,13 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     return
       Scaffold(
+        backgroundColor: Colors.white,
         body:
 
         Container(
           decoration: new BoxDecoration(
-              gradient: new LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 25, 178, 238),
-                  Color.fromARGB(255, 21,236,229)
-                ],
-              )),
+              color: Colors.white
+          ),
           child:
 
 
@@ -327,14 +320,7 @@ class _CustomSplashScreenState extends State<CustomSplashScreen> {
                           fit: BoxFit.cover,
                           image: widget.imageBackground,
                         ),
-            gradient: new LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Color.fromARGB(255, 25, 178, 238),
-                Color.fromARGB(255, 21,236,229)
-              ],
-            ),
+
                   color: widget.backgroundColor,
                 ),
               ),

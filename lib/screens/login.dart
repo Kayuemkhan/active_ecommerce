@@ -39,15 +39,15 @@ class _LoginState extends State<Login> {
   @override
   void initState() {
     //on Splash Screen hide statusbar
-    SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
     super.initState();
   }
 
   @override
   void dispose() {
     //before going to other screen show statusbar
-    SystemChrome.setEnabledSystemUIOverlays(
-        [SystemUiOverlay.top, SystemUiOverlay.bottom]);
+    SystemChrome.setEnabledSystemUIMode(
+        SystemUiMode.manual, overlays: [SystemUiOverlay.top, SystemUiOverlay.bottom]);
     super.dispose();
   }
 
@@ -249,7 +249,7 @@ class _LoginState extends State<Login> {
                       width: 75,
                       height: 75,
                       child:
-                          Image.asset('assets/login_registration_form_logo.png'),
+                          Image.asset('assets/square_logo.png'),
                     ),
                   ),
                   Padding(
