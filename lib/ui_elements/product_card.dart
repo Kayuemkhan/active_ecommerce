@@ -41,7 +41,7 @@ class _ProductCardState extends State<ProductCard> {
               Container(
                   width: double.infinity,
                   //height: 158,
-                  height: (( MediaQuery.of(context).size.width - 40 ) / 2) + 2,
+                  height: (( MediaQuery.of(context).size.width - 45 ) / 2) + 2,
                   child: ClipRRect(
                     clipBehavior: Clip.hardEdge,
                       borderRadius: BorderRadius.vertical(
@@ -52,7 +52,7 @@ class _ProductCardState extends State<ProductCard> {
                         fit: BoxFit.cover,
                       ))),
               Container(
-                height: 90,
+                height: 80,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -83,7 +83,7 @@ class _ProductCardState extends State<ProductCard> {
                       ),
                     ),
                    widget.has_discount ? Padding(
-                      padding: EdgeInsets.fromLTRB(16, 0, 16, 8),
+                      padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
                       child: Text(
                         widget.stroked_price,
                         textAlign: TextAlign.left,

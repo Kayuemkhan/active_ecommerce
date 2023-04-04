@@ -1,7 +1,6 @@
 import 'package:active_ecommerce_flutter/my_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:active_ecommerce_flutter/screens/product_details.dart';
-import 'package:active_ecommerce_flutter/app_config.dart';
 
 class ListProductCard extends StatefulWidget {
   int id;
@@ -49,7 +48,7 @@ class _ListProductCardState extends State<ListProductCard> {
                     fit: BoxFit.cover,
                   ))),
           Container(
-            width: 240,
+            width: 220,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

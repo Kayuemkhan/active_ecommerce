@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:active_ecommerce_flutter/my_theme.dart';
 import 'package:active_ecommerce_flutter/helpers/shimmer_helper.dart';
-import 'package:active_ecommerce_flutter/app_config.dart';
 import 'package:active_ecommerce_flutter/repositories/wishlist_repository.dart';
 import 'package:active_ecommerce_flutter/screens/product_details.dart';
 import 'package:active_ecommerce_flutter/custom/toast_component.dart';

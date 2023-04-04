@@ -249,7 +249,7 @@ class _LoginState extends State<Login> {
                       width: 75,
                       height: 75,
                       child:
-                          Image.asset('assets/square_logo.png'),
+                          Image.asset('assets/app_logo.png'),
                     ),
                   ),
                   Padding(

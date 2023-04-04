@@ -72,7 +72,6 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
     print("app_language.${app_language.$}");
     print("app_language_rtl${app_language_rtl.$}");
 
-
     // TODO: implement initState
     super.initState();
     // In initState()
